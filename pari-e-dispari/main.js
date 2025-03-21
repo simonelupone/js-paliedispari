@@ -49,7 +49,17 @@ while (!validChoice) {
 }
 console.log(`Scelta dell'utente: ${userChoice}`);
 
-const userNum = parseInt(prompt('Inserisci un numero da 1 a 5'));
+let userNum = parseInt(prompt('Inserisci un numero da 1 a 5'));
+
+// verifico se l'utente ha scelto un numero tra 1 e 5
+let validNumber = false;
+while (!validNumber) {
+    if (userNum > 0 && userNum <= 5) {
+        validNumber = true;
+    } else {
+        userNum = parseInt(prompt('Inserisci un numero da 1 a 5!!'));
+    }
+}
 console.log(`Numero scelto dall'utente:\n${userNum}`);
 
 let cpuRandomNum = generateCpuNum();
