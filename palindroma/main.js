@@ -1,9 +1,9 @@
 // Palindroma
-// Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
+// Chiedere all’utente di inserire una parola. Creare una funzione per capire se la parola inserita è palindroma
 
 function isPalindrome(word) {
     // controllo che nella parola non ci siano spazi ed eventualmente li tolgo
-    word = word.toLowerCase().replace(/\s/g, '');
+    word = word.toLowerCase();
     // confronto la parola originale con l'inverso e torna true se coincidono
     return word === word.split('').reverse().join('');
 }
@@ -12,21 +12,16 @@ function isPalindrome(word) {
 const userInput = prompt("Inserisci una parola per verificare se è palindroma");
 
 // imposto una condizione per controllare se l'utente ha inserito qualcosa
-if (userInput) {
+if (userInput && userInput.length >= 3 && !userInput.includes(' ')) {
     // se si, conrollo il risultato della funzione e visualizzo il messaggio corretto in console
     if (isPalindrome(userInput)) {
-        console.log(isPalindrome(userInput));
-
         console.log(`La parola "${userInput}" è palindroma!`);
     } else {
         console.log(`La parola "${userInput}" non è palindroma!`);
     }
 } else {
-    alert("Nessuna parola inserita.");
+    alert("Nessuna parola inserita o rilevati spazi \nAggiorna la pagina e scrivi una parola senza spazi!");
 }
 
-// Pari e Dispari
-// L’utente sceglie pari o dispari e
-// inserisce un numero da 1 a 5. Generiamo un numero random(sempre da 1 a 5) per il computer(usando una funzione).
-// Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione)
-// Dichiariamo chi ha vinto.
+// problema stringa con uno spazio (es 4 spazi)
+// problema lunghezza caratteri
