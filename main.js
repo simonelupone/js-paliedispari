@@ -11,6 +11,20 @@ function isPalindrome(word) {
 // Chiedo all'utente di inserire una parola
 const userInput = prompt("Inserisci una parola per verificare se è palindroma");
 
+// imposto una condizione per controllare se l'utente ha inserito qualcosa
+if (userInput) {
+    // se si, conrollo il risultato della funzione e visualizzo il messaggio corretto in console
+    if (isPalindrome(userInput)) {
+        console.log(isPalindrome(userInput));
+
+        console.log(`La parola "${userInput}" è palindroma!`);
+    } else {
+        console.log(`La parola "${userInput}" non è palindroma!`);
+    }
+} else {
+    alert("Nessuna parola inserita.");
+}
+
 // Pari e Dispari
 // L’utente sceglie pari o dispari e
 // inserisce un numero da 1 a 5. Generiamo un numero random(sempre da 1 a 5) per il computer(usando una funzione).
