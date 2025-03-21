@@ -44,3 +44,18 @@ console.log(`Numero scelto dall'utente:\n${userNum}`);
 
 let cpuRandomNum = generateCpuNum();
 console.log(cpuRandomNum);
+
+// determino il vincitore in base al risultato della funzione e alla scelta dell'utente
+if (isEven(userNum, cpuRandomNum)) {
+    if (userChoice === 'pari') {
+        console.log('Ha vinto l\'utente');
+    } else {
+        console.log('Ha vinto la cpu');
+    }
+} else {
+    if (userChoice === 'dispari') {
+        console.log('L\'utente ha vinto');
+    } else {
+        console.log('Ha vinto la cpu');
+    }
+}
