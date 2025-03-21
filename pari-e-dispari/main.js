@@ -34,3 +34,13 @@ function isEven(num1, num2) {
     }
     return isEven = false;
 }
+
+// inizializzo le costanti che conterranno i valori scelti per il gioco
+const userChoice = prompt('Scegliere Pari o Dispari').toLowerCase();
+console.log(`Scelta dell'utente: ${userChoice}`);
+
+const userNum = parseInt(prompt('Inserisci un numero da 1 a 5'));
+console.log(`Numero scelto dall'utente:\n${userNum}`);
+
+let cpuRandomNum = generateCpuNum();
+console.log(cpuRandomNum);
