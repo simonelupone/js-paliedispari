@@ -8,6 +8,9 @@ function isPalindrome(word) {
     return word === word.split('').reverse().join('');
 }
 
+// Chiedo all'utente di inserire una parola
+const userInput = prompt("Inserisci una parola per verificare se è palindroma");
+
 // Pari e Dispari
 // L’utente sceglie pari o dispari e
 // inserisce un numero da 1 a 5. Generiamo un numero random(sempre da 1 a 5) per il computer(usando una funzione).
