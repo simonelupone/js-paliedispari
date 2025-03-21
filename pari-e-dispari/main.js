@@ -35,8 +35,18 @@ function isEven(num1, num2) {
     return isEven = false;
 }
 
-// inizializzo le costanti che conterranno i valori scelti per il gioco
-const userChoice = prompt('Scegliere Pari o Dispari').toLowerCase();
+// inizializzo le variabili che conterranno i valori scelti per il gioco
+let userChoice = prompt('Scegliere Pari o Dispari').toLowerCase();
+
+// verifico se l'utente ha effettuato una scelta corretta
+let validChoice = false;
+while (!validChoice) {
+    if (userChoice.includes('pari') || userChoice.includes('dispari')) {
+        validChoice = true;
+    } else {
+        userChoice = prompt('Scegliere Pari o Dispari!!').toLowerCase();
+    }
+}
 console.log(`Scelta dell'utente: ${userChoice}`);
 
 const userNum = parseInt(prompt('Inserisci un numero da 1 a 5'));
